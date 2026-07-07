@@ -36,21 +36,21 @@ export default async function BeltDetailPage({
   const { prev, next } = getAdjacentBelts(belt.order);
 
   return (
-    <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-16">
+    <main className="mx-auto w-full max-w-2xl px-5 py-6 sm:px-8 sm:py-10">
       <Link
         href="/belts"
-        className="mb-8 inline-block text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+        className="mb-6 inline-block text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
       >
         ← 띠 목록으로
       </Link>
 
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-4">
         <BeltBadge belt={belt} size="lg" />
         <div>
           <span className="text-xs font-medium uppercase tracking-wide text-zinc-400">
             {belt.level === "dan" ? "유단자" : "급수"} · {belt.grade}
           </span>
-          <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
             {belt.name}
           </h1>
         </div>

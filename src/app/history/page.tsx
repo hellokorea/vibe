@@ -50,15 +50,15 @@ const timeline = [
 
 export default function HistoryPage() {
   return (
-    <main className="mx-auto w-full max-w-2xl flex-1 px-6 py-16">
-      <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+    <main className="mx-auto w-full max-w-2xl px-5 py-6 sm:px-8 sm:py-10">
+      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
         태권도 역사
       </h1>
-      <p className="mt-2 text-zinc-500 dark:text-zinc-400">
+      <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
         국기원 공식 자료를 바탕으로 정리했어요.
       </p>
 
-      <ol className="mt-10 flex flex-col gap-6 border-l-2 border-zinc-200 pl-6 dark:border-zinc-800">
+      <ol className="mt-8 flex flex-col gap-6 border-l-2 border-zinc-200 pl-5 dark:border-zinc-800">
         {timeline.map((item) => (
           <li key={item.year} className="relative">
             <span className="absolute -left-[1.95rem] top-1 h-3 w-3 rounded-full bg-zinc-900 dark:bg-zinc-50" />
