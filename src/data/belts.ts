@@ -11,6 +11,8 @@ export type Belt = {
   requirements: string[];
 };
 
+// 급수별 품새 매핑(태극1장=8급 ~ 태극8장=1급)은 국기원 자료 기준.
+// 단증 승급 대기기간(2단은 1단 취득 1년 후, 3단은 2단 취득 2년 후...)도 실제 규정 반영.
 export const belts: Belt[] = [
   {
     slug: "white",
@@ -22,7 +24,7 @@ export const belts: Belt[] = [
     textColor: "text-zinc-700",
     minMonths: 2,
     summary: "태권도를 처음 시작하는 단계. 기본자세와 예절을 익힌다.",
-    requirements: ["기본 서기·주먹 지르기", "품새: 태극 1장 기초 동작", "도장 예절 및 용어 숙지"],
+    requirements: ["기본 서기·주먹 지르기", "기본동작(태극 품새 이전 단계)", "도장 예절 및 용어 숙지"],
   },
   {
     slug: "yellow-stripe",
@@ -33,8 +35,8 @@ export const belts: Belt[] = [
     color: "bg-yellow-300",
     textColor: "text-yellow-950",
     minMonths: 2,
-    summary: "기본 발차기를 배우기 시작하는 단계.",
-    requirements: ["앞차기, 옆차기 기초", "품새: 태극 1장", "겨루기 기본 거리 감각"],
+    summary: "기본 발차기를 배우며 태극품새를 준비하는 단계.",
+    requirements: ["앞차기, 옆차기 기초", "기본동작 심화", "겨루기 기본 거리 감각"],
   },
   {
     slug: "yellow",
@@ -45,8 +47,8 @@ export const belts: Belt[] = [
     color: "bg-yellow-400",
     textColor: "text-yellow-950",
     minMonths: 2,
-    summary: "품새 동작이 정교해지고 기본 겨루기를 시작한다.",
-    requirements: ["품새: 태극 2장", "발차기 콤비네이션", "기본 겨루기 1회전"],
+    summary: "태극품새를 처음 배우기 시작하는 단계.",
+    requirements: ["품새: 태극 1장", "발차기 콤비네이션", "기본 겨루기 1회전"],
   },
   {
     slug: "green-stripe",
@@ -58,7 +60,7 @@ export const belts: Belt[] = [
     textColor: "text-green-950",
     minMonths: 3,
     summary: "체력과 균형감각이 요구되는 동작이 늘어난다.",
-    requirements: ["품새: 태극 3장", "돌려차기 기초", "낙법 기초"],
+    requirements: ["품새: 태극 2장", "돌려차기 기초", "낙법 기초"],
   },
   {
     slug: "green",
@@ -70,7 +72,7 @@ export const belts: Belt[] = [
     textColor: "text-white",
     minMonths: 3,
     summary: "품새의 완성도와 파워를 함께 평가받는 단계.",
-    requirements: ["품새: 태극 4장", "격파 기초(송판)", "겨루기 2회전"],
+    requirements: ["품새: 태극 3장", "격파 기초(송판)", "겨루기 2회전"],
   },
   {
     slug: "blue-stripe",
@@ -82,7 +84,7 @@ export const belts: Belt[] = [
     textColor: "text-white",
     minMonths: 3,
     summary: "고급 발차기 콤비네이션을 연습한다.",
-    requirements: ["품새: 태극 5장", "540도 발차기 기초", "겨루기 전술 이해"],
+    requirements: ["품새: 태극 4장", "540도 발차기 기초", "겨루기 전술 이해"],
   },
   {
     slug: "blue",
@@ -94,7 +96,7 @@ export const belts: Belt[] = [
     textColor: "text-white",
     minMonths: 3,
     summary: "실전 겨루기 비중이 늘어나는 단계.",
-    requirements: ["품새: 태극 6장", "겨루기 3회전", "체력 테스트"],
+    requirements: ["품새: 태극 5장", "겨루기 3회전", "체력 테스트"],
   },
   {
     slug: "red-stripe",
@@ -105,8 +107,8 @@ export const belts: Belt[] = [
     color: "bg-red-500",
     textColor: "text-white",
     minMonths: 4,
-    summary: "품새 8장을 준비하며 유단자 심사를 대비한다.",
-    requirements: ["품새: 태극 7장", "고급 격파", "심판 규정 기초 이해"],
+    summary: "품새 8장을 향해가며 유단자 심사를 대비한다.",
+    requirements: ["품새: 태극 6장", "고급 격파", "심판 규정 기초 이해"],
   },
   {
     slug: "red",
@@ -117,8 +119,8 @@ export const belts: Belt[] = [
     color: "bg-red-600",
     textColor: "text-white",
     minMonths: 4,
-    summary: "품새 8장을 완성하고 검은띠 심사를 준비한다.",
-    requirements: ["품새: 태극 8장", "겨루기 실전 평가", "품새 전체 복습"],
+    summary: "검은띠 승단 심사를 목전에 둔 단계.",
+    requirements: ["품새: 태극 7장", "겨루기 실전 평가", "품새 전체 복습"],
   },
   {
     slug: "red-black",
@@ -130,7 +132,7 @@ export const belts: Belt[] = [
     textColor: "text-white",
     minMonths: 6,
     summary: "검은띠 승단 심사 직전 단계. 태극 품새 전체를 완성한다.",
-    requirements: ["태극 1~8장 전체 시연", "격파 심화", "면접(태권도 정신·역사)"],
+    requirements: ["품새: 태극 8장", "격파 심화", "면접(태권도 정신·역사)"],
   },
   {
     slug: "black-1dan",
@@ -152,7 +154,7 @@ export const belts: Belt[] = [
     level: "dan",
     color: "bg-black",
     textColor: "text-white",
-    minMonths: 18,
+    minMonths: 24,
     summary: "품새의 완성도를 높이고 후배 지도 역할을 시작한다.",
     requirements: ["품새: 금강", "겨루기 심화 평가", "지도 실습"],
   },
@@ -164,7 +166,7 @@ export const belts: Belt[] = [
     level: "dan",
     color: "bg-black",
     textColor: "text-white",
-    minMonths: 24,
+    minMonths: 36,
     summary: "사범 자격을 준비하는 단계.",
     requirements: ["품새: 태백", "관 운영/지도 이론", "종합 심사"],
   },
